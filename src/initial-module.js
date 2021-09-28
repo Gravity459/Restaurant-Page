@@ -1,7 +1,7 @@
 
-const hello = (name) => 
-{
-    return `helo ${name}`
-}
+// const hello = (name) => 
+// {
+//     return `helo ${name}`
+// }
 
-export { hello };
+// export { hello };
