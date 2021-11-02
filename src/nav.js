@@ -1,29 +1,37 @@
-function createI(){
+function createListElement(headText){
 
-    const iDiv = document.createElement('i');
-    iDiv.classList.add('fas');
-    iDiv.classList.add('fa-hamburger');
-    iDiv.appendChild(createSpan());
-
-    return iDiv;
+    const listElement = document.createElement('li');
+    listElement.textContent = headText;
+    
+    return listElement;   
 }
 
-function createSpan(){
+function createList(){
 
-    const navSpan = document.createElement('span');
-    navSpan.textContent = 'Hamburgers Away...';
+    const list = document.createElement('ul');
+    list.appendChild(createListElement('Home'));
+    list.appendChild(createListElement('Contact'));
+    list.appendChild(createListElement('Merch'));
 
-    return navSpan;
+    return list;
 }
 
+function createDiv(){
+    
+    const elementsDiv = document.createElement('div');
+    elementsDiv.classList.add('nav-elements');
+    elementsDiv.appendChild(createList());
+    return elementsDiv;
+}
 
 function navModule(){
 
-    const navDiv = document.createElement('nav');
-    navDiv.setAttribute('id', 'nav');
-    navDiv.appendChild(createI());
-    return navDiv;
+    const nav = document.createElement('nav');
+    nav.setAttribute('id', 'nav');
+    nav.appendChild(createDiv());
+    
+    return nav;
 }
 
-// console.log(navModule());
 export default navModule;
+
