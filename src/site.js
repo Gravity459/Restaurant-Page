@@ -1,4 +1,5 @@
 import navModule from './nav';
+import homeModule from './home';
 
 function createI(){
 
@@ -33,6 +34,7 @@ function start(){
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
+    content.appendChild(homeModule());
 }
 
 export default start;
