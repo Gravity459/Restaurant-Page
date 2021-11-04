@@ -69,6 +69,9 @@ i.fas,i.fab {
     color: orange;
 }
 
+.current {
+    color: orange;
+}
 
 .main-area {
 	width: 500px;
@@ -76,13 +79,19 @@ i.fas,i.fab {
 	margin: 10px;
 	border-radius: 10px;
 	background-color: rgb(212, 174, 112);
-    
+}
+
+.home-area {
     display: grid;
     grid-template-rows: 30% auto 15%;
 }
 
+.menu-area {
+    height: auto;
+}
+
 .border{
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 .first, .second, .third {
@@ -107,4 +116,10 @@ i.fas,i.fab {
 .ltext{
     font-size: 35px;
     color: rgb(255, 252, 47);
+}
+
+.item {
+    width: 490px;
+    height: 150px;
+    margin: 5px;
 }
