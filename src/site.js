@@ -1,6 +1,20 @@
 import navModule from './nav';
 import homeModule from './home';
 
+currentElement = '';
+
+function lightUp(pagename){
+    const element = document.querySelector(`#${pagename}`);
+    
+    if(currentElement != ''){
+
+        const prevElement = document.querySelector(`#${currentElement}`);
+        prevElement.classList.remove('current');
+    }   
+
+    element.classList.add('current');
+}
+
 function createI(){
 
     const iDiv = document.createElement('i');
@@ -28,13 +42,20 @@ function createHeader(){
     return header;
 }
 
+function loadHome(){
+    
+    const content = document.querySelector('#content');
+    content.appendChild(homeModule());
+    lightUp(home);
+    currentElement = 'home';
+}
 
 function start(){
 
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
-    content.appendChild(homeModule());
+    loadHome();
 }
 
 export default start;

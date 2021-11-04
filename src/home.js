@@ -7,7 +7,6 @@ function createSpan(classname, text){
     return span;
 }
 
-
 function createDiv(classname, spanclass, text){
 
     const newDiv = document.createElement('div');

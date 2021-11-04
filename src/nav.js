@@ -10,8 +10,8 @@ function createList(){
 
     const list = document.createElement('ul');
     list.appendChild(createListElement('Home'));
+    list.appendChild(createListElement('Menu'));
     list.appendChild(createListElement('Contact'));
-    list.appendChild(createListElement('Merch'));
 
     return list;
 }
