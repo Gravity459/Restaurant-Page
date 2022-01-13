@@ -2,6 +2,7 @@ function createListElement(headText){
 
     const listElement = document.createElement('li');
     listElement.textContent = headText;
+    listElement.setAttribute('id', headText);
     
     return listElement;   
 }

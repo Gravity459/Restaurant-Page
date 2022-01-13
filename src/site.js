@@ -1,18 +1,56 @@
 import navModule from './nav';
 import homeModule from './home';
 
-currentElement = '';
+var currentElement = '';
 
-function lightUp(pagename){
-    const element = document.querySelector(`#${pagename}`);
+function lightUp(page){
+
+    if(currentElement === page)
+        return;
     
-    if(currentElement != ''){
+    else if (currentElement == ''){
+        currentElement = page;
+        var element = document.querySelector(`#${currentElement}`);
+        element = document.querySelector(`#${currentElement}`);
+    }
 
-        const prevElement = document.querySelector(`#${currentElement}`);
-        prevElement.classList.remove('current');
-    }   
+    else {
+        var element = document.querySelector(`#${currentElement}`);
+        element.classList.remove("current");
+        currentElement = page;
+        element = document.querySelector(`#${currentElement}`);
+    }
 
     element.classList.add('current');
+    
+}
+
+function eventListenersSetup() {
+
+    const navHome = document.querySelector('#Home');
+    const navMenu = document.querySelector(`#Menu`);
+    const navContact = document.querySelector(`#Contact`);
+
+    navHome.addEventListener( 'click', () => {
+        if (currentElement === "Home") return;
+        lightUp('Home');
+        loadHome();
+    });
+
+    navMenu.addEventListener( 'click', () => {
+        if (currentElement === "Menu") return;
+        lightUp('Menu');
+        
+        // function to load the menu
+    });
+
+    navContact.addEventListener( 'click', () => {
+        if (currentElement === "Contact") return;
+        lightUp('Contact');
+
+        // function to load the contact
+    });
+
 }
 
 function createI(){
@@ -43,11 +81,9 @@ function createHeader(){
 }
 
 function loadHome(){
-    
     const content = document.querySelector('#content');
     content.appendChild(homeModule());
-    lightUp(home);
-    currentElement = 'home';
+    lightUp('Home');
 }
 
 function start(){
@@ -56,6 +92,7 @@ function start(){
     content.appendChild(createHeader());
     content.appendChild(navModule());
     loadHome();
+    eventListenersSetup();
 }
 
 export default start;
