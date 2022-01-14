@@ -1,6 +1,5 @@
 import start from './site';
 
-start();
+//start();
 
-// console.log('helo');
 

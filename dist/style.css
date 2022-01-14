@@ -8,7 +8,7 @@ body {
     width: 100vw;
 	height: 100vh;
 	font-family: 'Grey Qo', cursive;
-    background-image: url(/burgers.jpg);
+    background-image: url(../images/burgers.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -94,6 +94,7 @@ i.fas,i.fab {
 
 .border{
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 .first, .second, .third {
@@ -124,4 +125,22 @@ i.fas,i.fab {
     width: 490px;
     height: 150px;
     margin: 5px;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.ipic {
+    padding: 5px;
+}
+
+.ipic img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.idesc {
+    width: 95%;
+    margin: 5px 10px;
+    padding: 10px;
 }
