@@ -31,7 +31,7 @@ function homeModule(){
 
     const mainarea = createDiv('main-area', '', '');
     mainarea.appendChild(createDiv('first', 'ftext', 'Welcome to the best burger joint in town!'));
-    mainarea.appendChild(createDiv('second', '', '../the-ultimate-hamburger.jpg'));
+    mainarea.appendChild(createDiv('second', '', '../images/the-ultimate-hamburger.jpg'));
     mainarea.appendChild(createDiv('third', 'ltext', 'And there is plenty more of where that came from!'));
     
     return mainarea;
