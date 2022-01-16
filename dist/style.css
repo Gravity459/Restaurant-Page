@@ -135,6 +135,10 @@ i.fas,i.fab {
     grid-template-columns: 30% auto;
 }
 
+.item h2 {
+    margin: 5px 2px;
+}
+
 .ipic {
     padding: 5px;
 }
@@ -147,6 +151,6 @@ i.fas,i.fab {
 
 .idesc {
     width: 95%;
-    margin: 5px 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
 }
