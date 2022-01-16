@@ -1,8 +1,10 @@
 function createSpan(classname, text){
 
-    const span = document.createElement('span');
+    var span = document.createElement('span');
     span.classList.add(classname);
     span.textContent = text;
+
+    addClass(span, "classy-font");
 
     return span;
 }
@@ -20,20 +22,30 @@ function createDiv(classname, spanclass, text){
     {
         const img = document.createElement('img');
         img.setAttribute('src', text);
+        img.setAttribute('alt', 'burger image');
         newDiv.appendChild(img);
     }
     
-
     return newDiv;
+}
+
+function addClass(element, classname){
+    element.classList.add(classname);
 }
 
 function homeModule(){
 
-    const mainarea = createDiv('main-area', '', '');
-    mainarea.appendChild(createDiv('first', 'ftext', 'Welcome to the best burger joint in town!'));
-    mainarea.appendChild(createDiv('second', '', '../images/the-ultimate-hamburger.jpg'));
-    mainarea.appendChild(createDiv('third', 'ltext', 'And there is plenty more of where that came from!'));
-    
+    var mainarea = createDiv('main-area', '', '');
+    addClass(mainarea,'home-area');
+
+    const first = createDiv('first', 'ftext', 'Welcome to the best burger joint in town!');
+    const second = createDiv('second', '', '../images/burgers.jpg');
+    const third = createDiv('third', 'ltext', 'And there is plenty more of where that came from!');
+
+    mainarea.appendChild(first);
+    mainarea.appendChild(second);
+    mainarea.appendChild(third);
+
     return mainarea;
 }
 
