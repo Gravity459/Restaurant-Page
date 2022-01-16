@@ -68,7 +68,7 @@ function createI(){
 function createSpan(){
 
     const span = document.createElement('span');
-    span.textContent = 'Hamburgers Away ...';
+    span.textContent = 'OH MY CHEESE!!!!';
     span.classList.add('classy-font');
 
     return span;
@@ -109,7 +109,7 @@ function start(){
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
-    // loadHome();
+    loadHome();
     // loadMenu();
     eventListenersSetup();
 }
