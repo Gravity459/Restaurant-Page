@@ -1,5 +1,7 @@
 import navModule from './nav';
 import homeModule from './home';
+import menuModule from './menu';
+import contactModule from './contact';
 
 var currentElement = '';
 
@@ -67,7 +69,8 @@ function createSpan(){
 
     const span = document.createElement('span');
     span.textContent = 'Hamburgers Away ...';
-    
+    span.classList.add('classy-font');
+
     return span;
 }
 
@@ -86,12 +89,28 @@ function loadHome(){
     lightUp('Home');
 }
 
+function loadMenu(){
+
+    const content = document.querySelector("#content");
+    content.appendChild(menuModule());
+    lightUp('Menu');
+}
+
+function loadContact(){
+
+    const content = document.querySelector("#content");
+    content.appendChild(contactModule());
+    lightUp('Contact');
+}
+
+
 function start(){
 
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
-    loadHome();
+    // loadHome();
+    // loadMenu();
     eventListenersSetup();
 }
 
