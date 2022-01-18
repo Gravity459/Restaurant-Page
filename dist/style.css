@@ -93,11 +93,13 @@ i.fas,i.fab {
     grid-template-rows: 30% auto 15%;
 }
 
-.menu-area {
-    height: auto;
+.contact-area {
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 35% auto;
 }
 
-.border{
+.border {
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -154,3 +156,37 @@ i.fas,i.fab {
     margin: 5px;
     padding: 5px;
 }
+
+.image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+}
+
+.image-area img{
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.desc-area {
+    padding: 10px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 0 10px 10px 0;
+    flex-direction: column;
+}
+
+.desc-area h1 {
+    color: rgb(95, 95, 95);
+    text-decoration: underline;
+    margin: 5px 0;
+}
+
+.desc-area p {
+    color: rgb(53, 53, 53);
+    margin: 5px 0;
+}
+

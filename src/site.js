@@ -109,8 +109,8 @@ function start(){
     const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
-    loadHome();
-    // loadMenu();
+    // loadHome();
+    loadMenu();
     eventListenersSetup();
 }
 
