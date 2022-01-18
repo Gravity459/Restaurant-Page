@@ -85,7 +85,6 @@ function menuModule() {
 
     var menuarea = document.createElement("div");
     menuarea.classList.add("main-area");
-    menuarea.classList.add("menu-area");
     
     createItems(menuarea);
     return menuarea;
