@@ -3,6 +3,7 @@ import homeModule from './home';
 import menuModule from './menu';
 import contactModule from './contact';
 
+const content = document.querySelector("#content");
 var currentElement = '';
 
 function lightUp(page){
@@ -36,24 +37,31 @@ function eventListenersSetup() {
     navHome.addEventListener( 'click', () => {
         if (currentElement === "Home") return;
         lightUp('Home');
+        content.removeChild(content.childNodes[2]);
         loadHome();
     });
 
     navMenu.addEventListener( 'click', () => {
         if (currentElement === "Menu") return;
         lightUp('Menu');
-        
+        content.removeChild(content.childNodes[2]);
+
         // function to load the menu
+        loadMenu();
     });
 
     navContact.addEventListener( 'click', () => {
         if (currentElement === "Contact") return;
         lightUp('Contact');
+        content.removeChild(content.childNodes[2]);
 
         // function to load the contact
+        loadContact();
     });
 
 }
+
+
 
 function createI(){
 
@@ -106,11 +114,9 @@ function loadContact(){
 
 function start(){
 
-    const content = document.querySelector('#content');
     content.appendChild(createHeader());
     content.appendChild(navModule());
-    // loadHome();
-    loadMenu();
+    loadHome();
     eventListenersSetup();
 }
 
