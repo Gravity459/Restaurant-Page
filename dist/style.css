@@ -185,6 +185,11 @@ i.fas,i.fab {
     margin: 5px 0;
 }
 
+.desc-area h1:hover {
+    color: rgb(143, 143, 143);
+}
+
+
 .desc-area p {
     color: rgb(53, 53, 53);
     margin: 5px 0;
