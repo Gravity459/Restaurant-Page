@@ -48,7 +48,7 @@ i.fas,i.fab {
 	color: black;
 }
 
-#nav{
+#nav {
     width: 500px;
     height: 75px;  
     background: black;
@@ -58,13 +58,13 @@ i.fas,i.fab {
     border-radius: 10px;
 }
 
-#nav ul{
+#nav ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
 }
 
-#nav ul li{
+#nav ul li {
     display: flex;
     align-items: center;
     font-size: 30px;
@@ -112,7 +112,7 @@ i.fas,i.fab {
     margin: 10px 0;
 }
 
-.ftext{
+.ftext {
     font-size: 50px;
     color: rgb(0, 0, 0);
     font-weight: 800;
@@ -124,7 +124,7 @@ i.fas,i.fab {
     border-radius: 10px;
 }
 
-.ltext{
+.ltext {
     font-size: 35px;
     color: rgb(255, 252, 47);
 }
