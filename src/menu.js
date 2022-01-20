@@ -1,6 +1,6 @@
 
+// to create the menu items
 function createItems(menuarea) {
-
     const item1 = createDiv(
       "../images/Philly-cheesesteak-Burger.jpg",
       "Philly Cheesesteak Burger",
@@ -31,7 +31,6 @@ function createItems(menuarea) {
       "Standing at 4-succulent patty tall, weighing in at more than half a kilo. It holds 2 crispy onion rings and is generously slathered with a special sauce. The new champion at Burger O'Clock."
     );
 
-
     menuarea.appendChild(item1);
     menuarea.appendChild(item2);
     menuarea.appendChild(item3);
@@ -39,8 +38,8 @@ function createItems(menuarea) {
     menuarea.appendChild(item5);
 }
 
+// to create the image portion
 function createDivImage(url){
-
     const newDiv = document.createElement('div');
     newDiv.classList.add('ipic');
 
@@ -52,8 +51,8 @@ function createDivImage(url){
     return newDiv;
 }
 
+// to create the description portion the item
 function createDivDesc(title, description){
-
     const newDiv = document.createElement('div');
     newDiv.classList.add("idesc");
 
@@ -69,8 +68,8 @@ function createDivDesc(title, description){
     return newDiv;
 }
 
+// to return a div for every item
 function createDiv(url, title, desc){
-
     const newDiv = document.createElement("div");
     newDiv.classList.add('item');
     newDiv.classList.add('border');
@@ -81,14 +80,14 @@ function createDiv(url, title, desc){
     return newDiv;
 }
 
+// to create the menu
 function menuModule() {
-
     var menuarea = document.createElement("div");
     menuarea.classList.add("main-area");
     
     createItems(menuarea);
+    
     return menuarea;
-
 }
 
 export default menuModule;

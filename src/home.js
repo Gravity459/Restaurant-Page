@@ -1,16 +1,17 @@
-function createSpan(classname, text){
 
+// to create the span with classy font
+function createSpan(classname, text){
     var span = document.createElement('span');
     span.classList.add(classname);
     span.textContent = text;
 
-    addClass(span, "classy-font");
+    span.classList.add("classy-font");
 
     return span;
 }
 
+// to create the divs for this home module
 function createDiv(classname, spanclass, text){
-
     const newDiv = document.createElement('div');
     newDiv.classList.add(classname);
 
@@ -29,14 +30,10 @@ function createDiv(classname, spanclass, text){
     return newDiv;
 }
 
-function addClass(element, classname){
-    element.classList.add(classname);
-}
-
+// to create the home
 function homeModule(){
-
     var mainarea = createDiv('main-area', '', '');
-    addClass(mainarea,'home-area');
+    mainarea.classList.add("home-area");
 
     const first = createDiv('first', 'ftext', 'Welcome to the best burger joint in town!');
     const second = createDiv('second', '', '../images/burgers.jpg');

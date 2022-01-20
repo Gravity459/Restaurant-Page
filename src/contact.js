@@ -1,3 +1,5 @@
+
+// to create the image div for contact
 function createImageDiv(url) {
     const newDiv = document.createElement("div");
     newDiv.classList.add('image-area');
@@ -9,7 +11,7 @@ function createImageDiv(url) {
     return newDiv;
 }
 
-
+// to make the heading with link
 function createLinkDiv(link) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("desc-area");
@@ -26,6 +28,7 @@ function createLinkDiv(link) {
     return newDiv;
 }
 
+// make a new paragraph element
 function createP(text) {
     const ptag = document.createElement("p");
     ptag.textContent += text;
@@ -33,6 +36,7 @@ function createP(text) {
     return ptag;
 }
 
+// make a new h1 element
 function createH1(text) {
     const h1tag = document.createElement("h1");
     h1tag.textContent = text;
@@ -40,13 +44,14 @@ function createH1(text) {
     return h1tag;
 }
 
+// for making the code look clean
 function createContact(contact) {
     contact.appendChild(createImageDiv("../images/profile.jpg"));
     contact.appendChild(createLinkDiv("https://github.com/Gravity459"));
 }
 
+// to create the contact
 function contactModule() {
-
     var contactarea = document.createElement("div");
     contactarea.classList.add("main-area");
     contactarea.classList.add("contact-area");
